@@ -1,5 +1,3 @@
-"""
-"""
 import sys
 import re
 
@@ -8,7 +6,6 @@ def get_eng_to_piglatin(text):
     words = text.replace('\W', ' ').split()
     pig_words = ''
     for word in words:
-        # гласные
         res = re.findall(r'\b[aeiouhAEIOUH]\w+', word)
         if res:
             word = re.sub(r'\b([aeiouhAEIOUH]\w+)', r'\1ya', word)
