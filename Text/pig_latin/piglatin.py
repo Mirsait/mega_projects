@@ -6,13 +6,10 @@ def get_eng_to_piglatin(text):
     words = text.replace('\W', ' ').split()
     pig_words = ''
     for word in words:
-        res = re.findall(r'\b[aeiouhAEIOUH]\w+', word)
-        if res:
-            word = re.sub(r'\b([aeiouhAEIOUH]\w+)', r'\1ya', word)
-        else:
-            word = re.sub(r'\b([^aeiouhAEIOUHqQ ]+)(\w+)', r'\2\1ay', word)
-            word = re.sub(r'\b(qu)(\w+)', r'\2\1ay', word)
-        pig_words += word+' '
+        word = re.sub(r'\b([aeiouhAEIOUH]\w+)', r'\1ya', word)
+        word = re.sub(r'\b([^aeiouhAEIOUHqQ ]+)(\w+)', r'\2\1ay', word)
+        word = re.sub(r'\b(qu)(\w+)', r'\2\1ay', word)
+        pig_words += word + ' '
     return pig_words
 
 
