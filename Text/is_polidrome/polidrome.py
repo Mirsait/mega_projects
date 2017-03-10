@@ -1,6 +1,8 @@
+import sys
+
+
 def is_polydrome(text):
-    """  """
-    pass
+    return (text == text[::-1])
 
 
 if __name__ == '__main__':
