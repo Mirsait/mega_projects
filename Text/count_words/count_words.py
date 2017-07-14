@@ -1,5 +1,6 @@
 
 def get_data_from_file(filename):
+
     return data
 
 def get_count_words(data):
@@ -8,3 +9,4 @@ def get_count_words(data):
 
 if __name__ == '__main__':
     main()
+
